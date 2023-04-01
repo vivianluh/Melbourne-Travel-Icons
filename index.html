@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <title>Melbourne Travel Icons</title>
+        <style>
+
+             /*animista code*/
+             @-webkit-keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}
+             100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+            }
+             @keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}
+             100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+            }
+             @-webkit-keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}
+             100%{-webkit-transform:scale(1);transform:scale(1)}
+            }
+             @keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}
+             100%{-webkit-transform:scale(1);transform:scale(1)}}
+
+            .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+            }
+            .rotate:hover{
+                -webkit-animation: rotate-center 0.6s ease-in-out both;
+                -moz-animation: rotate-center 0.6s ease-in-out both;
+                animation: rotate-center 0.6s ease-in-out both;
+            }
+            .scale-up-center:hover{
+                -webkit-animation:scale-up-center .5s ease-in-out both;
+                -moz-animation: scale-up-center .5s ease-in-out both;
+                animation:scale-up-center .5s ease-in-out both
+            }
+
+        </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+    </head>
+
+    <body style="background-color: rgba(126, 208, 240, 0.699);">
+
+        <div class="row">
+            <div class="image-container scale-up-center"><img id="flinders1" src="img/icons-4-01.png" height="200" width="200" onmouseover="this.src='img/icons-8 11.png';" onmouseout="this.src='img/icons-4-01.png';"/></div>
+            <div class="image-container scale-up-center"><img id="tram2" src="img/icons-4-02.png" height="200" width="200" onmouseover="this.src='img/icons-8 12.png';" onmouseout="this.src='img/icons-4-02.png';"/></div>
+            <div class="image-container scale-up-center"><img id="cathedral3" src="img/icons-4-03.png" height="200" width="200" onmouseover="this.src='img/icons-8 13.png';" onmouseout="this.src='img/icons-4-03.png';"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container scale-up-center"><img id="artcentre4" src="img/icons-4-04.png" height="200" width="200" onmouseover="this.src='img/icons-8 16.png';" onmouseout="this.src='img/icons-4-04.png';"/></div>
+            <div class="image-container rotate"><img id="ferris5" src="img/icons-4-05.png" height="200" width="200" onmouseover="this.src='img/icons-8 15.png';" onmouseout="this.src='img/icons-4-05.png';"/></div> 
+            <div class="image-container scale-up-center"><img id="brighton6" src="img/icons-4-06.png" height="200" width="200" onmouseover="this.src='img/icons-8 14.png';" onmouseout="this.src='img/icons-4-06.png';"/></div>
+            </div>
+
+        <div class="row">
+            <div class="image-container rotate"><img id="lunar7" src="img/icons-4-07.png" height="200" width="200" onmouseover="this.src='img/icons-8 17.png';" onmouseout="this.src='img/icons-4-07.png';"/></div>
+            <div class="image-container scale-up-center"><img id="eureka8" src="img/icons-4-08.png" height="200" width="200" onmouseover="this.src='img/icons-8 18.png';" onmouseout="this.src='img/icons-4-08.png';"/></div>
+            <div class="image-container scale-up-center"><img id="neon9" src="img/icons-4-09.png" height="200" width="200" onmouseover="this.src='img/icons-8 19.png';" onmouseout="this.src='img/icons-4-09.png';"/></div>
+        </div>
+
+        <script>
+            var sound1 = new buzz.sound("sound/flinders-1.mp3")
+            var sound2 = new buzz.sound("sound/tram-2.mp3")
+            var sound3 = new buzz.sound("sound/cathedral-3.mp3")
+            var sound4 = new buzz.sound("sound/artcentre-4.mp3")
+            var sound5 = new buzz.sound("sound/ferris-5.mp3")
+            var sound6 = new buzz.sound("sound/brighton-6.mp3")
+            var sound7 = new buzz.sound("sound/lunarpark-7.mp3")
+            var sound8 = new buzz.sound("sound/eureka-8.mp3")
+            var sound9 = new buzz.sound("sound/neonsign-9.mp3")
+
+            window.onload = function() {
+                document.getElementById('flinders1').addEventListener('click', function () {sound2.play();});
+                document.getElementById('tram2').addEventListener('click', function () {sound1.play();});
+                document.getElementById('cathedral3').addEventListener('click', function () {sound3.play();});
+                document.getElementById('artcentre4').addEventListener('click', function () {sound4.play();});
+                document.getElementById('ferris5').addEventListener('click', function () {sound5.play();});
+                document.getElementById('brighton6').addEventListener('click', function () {sound6.play();});
+                document.getElementById('lunar7').addEventListener('click', function () {sound7.play();});
+                document.getElementById('eureka8').addEventListener('click', function () {sound8.play();});
+                document.getElementById('neon9').addEventListener('click', function () {sound9.play();});
+            };
+
+
+        </script>
+        
+    </body>
+    
+</html>
